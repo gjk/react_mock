@@ -1,0 +1,43 @@
+.header{
+  .public-container {
+    @include publicContainer;
+  }
+  .header-nav {
+    max-width: $px1200;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+    background: #fff;
+    a {
+      float: left;
+      padding: 10px 15px;
+      color: $c3;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .nav-active {
+      text-decoration: underline;
+      color: #29d2df;
+    }
+  }
+  .quick-link{
+    margin: 0 auto;
+    color: #fff;
+    margin: 0 auto;
+    padding: 6px 0;
+    background-color: #000;overflow: hidden;clear: both;
+    .header-login{
+      float: right;
+      .header-link{
+        color: #fff;
+        &:hover {
+          color: $c20899f;
+        }
+      }
+      .header-separator {
+        padding: 0 6px;
+      }
+    }
+  }
+}

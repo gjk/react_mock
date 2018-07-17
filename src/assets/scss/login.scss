@@ -1,0 +1,29 @@
+.login{
+  @include publicContainer;
+
+  .form-group{
+    margin-top: 10px;
+    input{
+      padding: 3px 5px;border: 1px solid #333;
+      &:hover,
+      &:focus {
+        border-color: $c20899f;
+      }
+      
+    }
+    .form-error {
+      padding-left: 5px;
+      color: red;
+    }
+    .form-btn{
+      padding: 6px 30px;
+      text-align: center;
+      color: #fff;
+      background-color: $c20899f;
+      border-radius: 3px;
+      &:hover {
+        background-color: #1a7183;
+      }
+    }
+  }
+}

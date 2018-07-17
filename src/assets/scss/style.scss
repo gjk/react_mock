@@ -1,0 +1,92 @@
+// // px转换rem start
+// @function rem($px) {
+//   @return $px / 75 * 1rem;
+// }
+// // px转换rem end
+
+// 单行文本溢出省略
+@mixin textOverflow{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行文本溢出省略
+@mixin textOverflowLines($num){
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+}
+
+// 字体大小
+@mixin fontSize($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+@mixin publicContainer {
+  width: $px1200;
+  margin: 0 auto;
+}
+
+// 背景图片 倍图设置
+@mixin backgroundImage($url){
+  background-image: url($url + '@2x.png');
+  @media (-webkit-min-device-pixel-ratio:3),(min-device-pixe-ratio:3){
+    background-image: url($url + '@3x.png');
+  };
+}
+
+// 边框样式
+@mixin barderBtn($width: rem(1), $value: solid, $color: $cb){
+  border: $width $value $color
+}
+
+// 文字样式
+@mixin textNormal($fz: 18px, $fc: $c3, $ta: inherit, $fw: normal) {
+  font-size: $fz;color: $fc;text-align: $ta;font-weight: $fw;
+}
+
+// 颜色公共变量
+$cf:#fff;
+$c0:#000;
+$ce:#eee;
+$cb:#bbb;
+$c3:#333;
+$c6:#666;
+$c9:#999;
+$cf5:#f5f5f5;
+$c20899f:#20899f;
+
+// 像素公共变量
+// $rem22:rem(22);
+// $rem24:rem(24);
+// $rem28:rem(28);
+// $rem30:rem(30);
+// $rem40:rem(40);
+// $rem670:rem(670);
+// $rem750:rem(750);
+$px22:22px;
+$px24:24px;
+$px28:28px;
+$px30:30px;
+$px40:40px;
+$px670:670px;
+$px750:750px;
+$px1200:1200px;
+
+// display三种变量
+$db:block;
+$dib:inline-block;
+$dn:none;
+
+// text-align三种变量
+$ta-c:center;
+$ta-l:left;
+$ta-r:right;

@@ -1,0 +1,11 @@
+.list{
+  width: $px1200;margin: 0 auto;
+  section{
+    padding: 15px 0;border-bottom: 1px solid $ce;
+    // &:hover{background-color: $c9;}
+    a{
+      color: $c6;
+      &:hover{color: $c0;}
+    }
+  }
+}
