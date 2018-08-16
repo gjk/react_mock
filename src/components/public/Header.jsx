@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { NavLink,Link } from 'react-router-dom'
 import "../../assets/scss/header.scss";
-import SITE from "../../../config/site.json";
+import SITE from "../../../config/site";
 
 export class Header extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export class Header extends React.Component {
   }
 
   // 在组件接收到新的props或者state但还没有render时被调用。在初始化时不会被调用。
-  componentWillUpdate() { 
+  componentWillUpdate() {
 
   }
 

@@ -4,7 +4,7 @@ import qs from 'qs'
 // 连接测试/正式接口时，注释下行即可。
 import "./mockData";
 
-import apiUrl from "../../config/api-url.json";
+import apiUrl from "../../config/api-url";
 
 // axios 配置
 axios.defaults.timeout = 30000

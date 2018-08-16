@@ -9,11 +9,11 @@ let lastPrams = process.argv[process.argv.length - 1];
 const fileNameDIY = lastPrams.indexOf('.js') < 0 ? lastPrams : 'dist';
 
 const config = {
-  entry: projectRootUrl + '/src/index.jsx',
+  entry: ["babel-polyfill", projectRootUrl + '/src/index.jsx'],
   // context: path.resolve(__dirname, ''),
   output: {
     filename: 'bundle.js', // 项目打包文件
-    path: projectRootUrl + fileNameDIY + '/', // 项目打包输出路径
+    path: projectRootUrl + '/' + fileNameDIY, // 项目打包输出路径
     publicPath: '/' // 打包后引用的资源路径
   },
 
@@ -49,7 +49,7 @@ const config = {
             }
           }
         ]
-      }, 
+      },
       {
         test: /(\.jsx|\.js)$/,
         use: [{
@@ -74,7 +74,7 @@ const config = {
   //   'react': 'React'
   // },
   plugins: [
-    new CleanWebpackPlugin(['../' + fileNameDIY]), // 清除dist
+    new CleanWebpackPlugin([projectRootUrl + '/' + fileNameDIY]), // 清除dist
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
